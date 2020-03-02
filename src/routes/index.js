@@ -1,7 +1,11 @@
 const router = require('koa-router')()
 
 router.get('/', async (ctx, next) => {
-	ctx.body = 'hello'
+	ctx.body = 'hello liufupeng'
+})
+
+router.get('/user', async (ctx, next) => {
+	ctx.body = 'liufupeng'
 })
 
 router.get('/string', async (ctx, next) => {
