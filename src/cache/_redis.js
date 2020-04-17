@@ -6,7 +6,7 @@ const redis = require('redis')
 const { REDIS_CONF } = require('../conf/db')
 
 const redisClient = redis.createClient(REDIS_CONF.prot, REDIS_CONF.host)
-redisClient.auth(123456)
+
 redisClient.on('error', err => {
     console.error('redis error', err)
 })
