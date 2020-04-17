@@ -20,7 +20,7 @@ let MYSQL_CONF = {
 if (isProd) { 
     REDIS_CONF = {
         prot: 6379,
-        host: '127.0.0.1'
+        host: '101.37.20.247'
     }
 
     MYSQL_CONF = {

@@ -2,6 +2,7 @@
  * @description sequelize 同步数据库
  */
 const seq = require('./seq')
+require('./model')
 
 //测试连接
 seq.authenticate().then( () => {
