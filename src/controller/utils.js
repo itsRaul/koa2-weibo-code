@@ -34,8 +34,10 @@ async function saveFile({ size, filePath, name, type }) {
 
     //移动文件
     const fileName = Date.now() + '.' + name
-    const distFilePath = path.join(filePath, DIST_FOLDER_PATH)
+    const distFilePath = path.join(DIST_FOLDER_PATH, fileName)
     await fse.move(filePath, distFilePath)
+
+    //返回信息
     return new SuccessModel({
         url: '/' + fileName
     })

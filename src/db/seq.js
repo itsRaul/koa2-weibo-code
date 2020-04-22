@@ -9,7 +9,14 @@ const { host,user,password,database } = MYSQL_CONF
 
 const conf = {
     host,
-    dialect: 'mysql'
+    dialect: 'mysql',
+    define: {
+        charset: 'utf-8',
+        dialectOptions: {
+            collate: 'utf8_general_ci'
+        },
+        timestamps: true
+    }
 }
 
 if (isTest) {

@@ -15,8 +15,12 @@ const { SESSION_SECRET_KEY } = require('./conf/secretKeys')
 
 const userAPIRouter = require('./routes/api/user')
 const utilsAPIRouter = require('./routes/api/utils')
+const homeAPIRouter = require('./routes/api/blog-home')
+const profileAPIRouter = require('./routes/api/blog-profile')
 
 const userViewRouter = require('./routes/view/user')
+const bolgViewRouter = require('./routes/view/blog')
+const errorViewRouter = require('./routes/view/error')
 
 // const { SECRET } = require('../conf/constants')
 
@@ -68,11 +72,13 @@ app.use(async (ctx, next) => {
 })
 
 // routes
-app.use(userViewRouter.routes(), userViewRouter.allowedMethods())
+app.use(homeAPIRouter.routes(), homeAPIRouter.allowedMethods())
 app.use(userAPIRouter.routes(), userAPIRouter.allowedMethods())
 app.use(utilsAPIRouter.routes(), utilsAPIRouter.allowedMethods())
-
-
+app.use(profileAPIRouter.routes(), profileAPIRouter.allowedMethods())
+app.use(userViewRouter.routes(), userViewRouter.allowedMethods())
+app.use(bolgViewRouter.routes(), bolgViewRouter.allowedMethods())
+app.use(errorViewRouter.routes(), errorViewRouter.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
