@@ -1,5 +1,6 @@
 /**
  * @description 微博 数据格式校验
+ * @author 双越老师
  */
 
 const validate = require('./_validate')

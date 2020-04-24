@@ -1,10 +1,12 @@
 /**
- * @description 博客
+ * @description 微博数据模型
+ * @author 双越老师
  */
-const seq = require('../seq')
-const { INTEGER,STRING,TEXT } = require('../types')
 
-const Bolg = seq.define('blog', {
+const seq = require('../seq')
+const { INTEGER, STRING, TEXT } = require('../types')
+
+const Blog = seq.define('blog', {
     userId: {
         type: INTEGER,
         allowNull: false,
@@ -21,4 +23,4 @@ const Bolg = seq.define('blog', {
     }
 })
 
-module.exports = Bolg
+module.exports = Blog

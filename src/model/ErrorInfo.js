@@ -1,5 +1,6 @@
 /**
- * @description 失败信息的集合，包括 errno 和 message
+ * @description 失败信息集合，包括 errno 和 message
+ * @author 双越老师
  */
 
 module.exports = {

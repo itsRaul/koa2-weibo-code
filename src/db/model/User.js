@@ -1,9 +1,12 @@
 /**
  * @description 用户数据模型
+ * @author 双越老师
  */
-const seq = require('../seq')
-const { STRING,DECIMAL } = require('../types')
 
+const seq = require('../seq')
+const { STRING, DECIMAL } = require('../types')
+
+// users
 const User = seq.define('user', {
     userName: {
         type: STRING,
@@ -19,7 +22,7 @@ const User = seq.define('user', {
     nickName: {
         type: STRING,
         allowNull: false,
-        comment: '昵称',
+        comment: '昵称'
     },
     gender: {
         type: DECIMAL,
@@ -29,10 +32,10 @@ const User = seq.define('user', {
     },
     picture: {
         type: STRING,
-        comment: '头像'
+        comment: '头像，图片地址'
     },
     city: {
-        type: DECIMAL,
+        type: STRING,
         comment: '城市'
     }
 })

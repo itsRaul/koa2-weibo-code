@@ -1,5 +1,6 @@
 /**
  * @description utils api 路由
+ * @author 双越老师
  */
 
 const router = require('koa-router')()
@@ -9,7 +10,7 @@ const { saveFile } = require('../../controller/utils')
 
 router.prefix('/api/utils')
 
-//上传图片
+// 上传图片
 router.post('/upload', loginCheck, koaFrom(), async (ctx, next) => {
     const file = ctx.req.files['file']
     if (!file) {
